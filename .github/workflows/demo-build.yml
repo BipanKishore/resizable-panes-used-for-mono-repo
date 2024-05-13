@@ -58,9 +58,19 @@ jobs:
       run: |
           echo $myVar
 
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.0
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4
+          # If you're changing the branch from main,
+          # also change the `main` in `refs/heads/main`
+          # below accordingly.
+      if: github.ref == 'refs/heads/main'
       with:
-        branch: gh-pages
-        folder: ~/work/resizable-panes/resizable-panes/packages/demo-app/docs
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ~/work/resizable-panes/resizable-panes/packages/demo-app/docs
+
+    # - name: Deploy to GitHub Pages
+    #   uses: JamesIves/github-pages-deploy-action@4.1.0
+    #   with:
+    #     branch: gh-pages
+    #     folder: ~/work/resizable-panes/resizable-panes/packages/demo-app/docs
         
