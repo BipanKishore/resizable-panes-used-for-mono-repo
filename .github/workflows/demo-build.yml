@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run: 
-        working-directory: ./packages/demo
+        working-directory: ./packages/demo-app
 
     strategy:
       matrix:
@@ -53,4 +53,3 @@ jobs:
         branch: gh-pages
         folder: ~/packages/demo/docs
         
-
