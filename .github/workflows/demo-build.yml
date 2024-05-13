@@ -63,7 +63,7 @@ jobs:
           # If you're changing the branch from main,
           # also change the `main` in `refs/heads/main`
           # below accordingly.
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/master'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ~/work/resizable-panes/resizable-panes/packages/demo-app/docs
