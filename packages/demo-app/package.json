@@ -1,5 +1,6 @@
 {
   "name": "demo-app",
+  "homepage": "https://bipankishore.github.io/resizable-panes/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
