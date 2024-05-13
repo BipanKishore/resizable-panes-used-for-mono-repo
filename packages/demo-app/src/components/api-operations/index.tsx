@@ -8,7 +8,7 @@ export const ApiOperations = ({ apiRef, selectIdsOption }: any) => {
 
   const getState = () => {
     const state = apiRef.current.getState();
-    console.log("Current State", state);
+    console.log("State", state);
   };
 
   const getSizes = () => {
