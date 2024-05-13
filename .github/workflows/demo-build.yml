@@ -38,13 +38,13 @@ jobs:
 
     - name: New Docs
       run: |
-        npm run docs
+        npm run build
 
     - name: Upload artifacts
       if: always()
       uses: actions/upload-artifact@v4
       with: 
-        path: docs
+        path: build
         retention-days: 30
 
     - name: Echo
@@ -57,5 +57,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
         branch: gh-pages
-        folder: ~/packages/demo-app/docs
+        folder: ~/packages/demo-app/build
         

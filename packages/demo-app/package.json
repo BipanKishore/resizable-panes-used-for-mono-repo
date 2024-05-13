@@ -27,7 +27,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "docs": "rimraf docs && npm run build",
     "eject": "react-scripts eject",
     "prelink-local": "rimraf node_modules/.cache",
     "link-local": "npm link resizable-panes-react react",
