@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "master" ]
     paths:
-      - 'packages/demo**'
+      - 'packages/demo-app/**'
   workflow_dispatch:
 
 permissions:
