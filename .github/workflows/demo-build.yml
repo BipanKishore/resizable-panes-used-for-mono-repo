@@ -54,10 +54,13 @@ jobs:
         pwd
         myVar=$(pwd)
         echo $myVar
+    - name: Echo2
+      run: |
+          echo $myVar
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
         branch: gh-pages
-        folder: ~/resizable-panes/resizable-panes/packages/demo-app/docs
+        folder: ~/work/resizable-panes/resizable-panes/packages/demo-app/docs
         
