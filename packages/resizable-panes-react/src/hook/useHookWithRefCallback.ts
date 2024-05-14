@@ -1,6 +1,5 @@
 import {useCallback, useRef} from 'react'
-import {noop} from '../utils/util'
-
+import {noop} from 'resizable-core'
 export function useHookWithRefCallback (callBack: any, callBackForNoNode: any = noop) {
   const ref = useRef(null)
   const setRef = useCallback((node: any) => {

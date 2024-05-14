@@ -1,11 +1,11 @@
 import React, {useContext} from 'react'
 import '../style.css'
 import {IResizablePaneProviderProps} from '../@types'
-import {getContainerClass} from '../utils/dom'
+import {getContainerClass} from 'resizable-core'
 import {ResizablePaneContext} from '../context/resizable-panes-context'
 import {useHookWithRefCallback} from '../hook/useHookWithRefCallback'
-import {ResizableModel} from '../models'
-import {getDetectionService} from '../services/detection-service'
+import {ResizableModel} from'resizable-core'
+import {getDetectionService} from 'resizable-core'
 
 export const ResizablePanes = (props: IResizablePaneProviderProps) => {
   const {children, className, unit, vertical, uniqueId} = props

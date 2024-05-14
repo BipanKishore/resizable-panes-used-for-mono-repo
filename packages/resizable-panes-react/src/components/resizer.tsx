@@ -6,12 +6,14 @@ import React, {
 } from 'react'
 import {ResizablePaneContext} from '../context/resizable-panes-context'
 import {
-  getSetResizerSize, joinClassName
-} from '../utils/dom'
-import {findIndex, getResizerId} from '../utils/util'
+  ResizableModel,
+  getSetResizerSize, joinClassName,
+  findIndex, getResizerId
+} from 'resizable-core'
+
 import {useHookWithRefCallback} from '../hook/useHookWithRefCallback'
 import {IResizer} from '../@types'
-import {ResizableModel} from '../models'
+
 
 export const Resizer = (props: IResizer) => {
   const {children, id} = props

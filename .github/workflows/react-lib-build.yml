@@ -5,6 +5,7 @@ on:
     branches: [ "master" ]
     paths:
         - 'packages/resizable-panes-react/**'
+        - 'packages/resizable-core/**'
 jobs:
   build:
 
@@ -59,4 +60,10 @@ jobs:
     #   env:
     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
     #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+    - name: NPM Publish
+      if: ${{ github.ref == 'refs/heads/master' }}
+      uses: JS-DevTools/npm-publish@v3
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
 

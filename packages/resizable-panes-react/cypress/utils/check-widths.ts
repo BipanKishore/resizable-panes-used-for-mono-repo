@@ -1,4 +1,4 @@
-import {toPx} from '../../src/utils/dom'
+import {toPx} from 'resizable-core'
 
 export interface ISizeMap {
     [key:string]: number

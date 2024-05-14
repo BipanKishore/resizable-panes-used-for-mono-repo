@@ -1,5 +1,5 @@
 import React from 'react'
-import {joinClassName} from '../../../src/utils/dom'
+import {joinClassName} from  'resizable-core'
 
 const statesClassOrange = {
   true: 'bg-orange-500',
