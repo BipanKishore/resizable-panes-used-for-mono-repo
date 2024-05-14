@@ -77,13 +77,13 @@ jobs:
     #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
 
-    - name: New Docs
-      if: ${{ github.ref == 'refs/heads/master' }}
+    - name: Demo App Build
       run: |
         npm run build
       working-directory: ./packages/demo-app
 
-    - name: Deploy to GitHub Pages
+    - name: Demo App - Deploy to GitHub Pages
+      if: ${{ github.ref == 'refs/heads/master' }}
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
         branch: gh-pages
