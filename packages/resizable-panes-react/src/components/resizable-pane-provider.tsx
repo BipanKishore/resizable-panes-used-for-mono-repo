@@ -1,15 +1,21 @@
 import React, {useEffect, useRef} from 'react'
+
 import {
-  ResizablePaneContext,
-  getResizableContext
+  ResizablePaneContext
 } from '../context/resizable-panes-context'
+
+import {
+  getResizable,
+  deleteUndefined, noop,
+  RATIO, RESIZE_HTML_EVENT,
+  clearflagsOnNewView, toRatioModeAllPanes,
+  attachDetectionCoordinate,
+  addDOMEvent, removeDOMEvent
+} from 'resizable-core'
+
 import {ResizablePanes} from './resizable-panes'
-import {deleteUndefined, noop} from '../utils/util'
+
 import {IResizablePaneProviderProps} from '../@types'
-import {RATIO, RESIZE_HTML_EVENT} from '../constant'
-import {clearflagsOnNewView, toRatioModeAllPanes} from '../utils/resizable-pane'
-import {attachDetectionCoordinate} from '../services/detection-service'
-import {addDOMEvent, removeDOMEvent} from '../utils/dom'
 
 const emptyObhect = {}
 
@@ -40,7 +46,7 @@ export const ResizablePaneProvider = (props: IResizablePaneProviderProps) => {
   ) as IResizablePaneProviderProps
   const {visibility, onReady, unit} = currentProps
 
-  const resizableRef: any = useRef(getResizableContext(currentProps))
+  const resizableRef: any = useRef(getResizable(currentProps))
 
   const resizable = resizableRef.current
   const {api} = resizable

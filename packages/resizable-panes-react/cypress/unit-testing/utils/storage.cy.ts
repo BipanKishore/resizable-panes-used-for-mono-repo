@@ -1,5 +1,5 @@
 import {SinonSpy} from 'cypress/types/sinon'
-import {ResizeStorage} from '../../../src/utils/storage'
+import {ResizeStorage} from  'resizable-core'
 import {P0, rScontainerId} from '../../component-testing/fix-test-ids'
 import {ReactElement} from 'react'
 

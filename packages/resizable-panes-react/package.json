@@ -46,6 +46,7 @@
     "throttleit": "^2.0.0"
   },
   "devDependencies": {
+    "rimraf": "^5.0.7",
     "@babel/core": "^7.22.10",
     "@babel/eslint-parser": "^7.22.11",
     "@babel/preset-env": "^7.22.10",

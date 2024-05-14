@@ -1,6 +1,6 @@
 import {MouseEventHandler, ReactElement, ReactNode} from 'react'
 import {IKeyToBoolMap, IMapIdToSize} from './general-type'
-import {PaneModel} from '../models'
+import {PaneModel} from 'resizable-core'
 import {
   UnitTypes,
   IVisibilityState,

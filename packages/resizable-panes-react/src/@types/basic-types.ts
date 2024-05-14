@@ -1,5 +1,4 @@
-import {PaneModel} from '../models'
-
+import {PaneModel} from 'resizable-core'
 export type UnitTypes = 'ratio' | 'pixel' | undefined
 
 export type IPaneModelKey = keyof PaneModel

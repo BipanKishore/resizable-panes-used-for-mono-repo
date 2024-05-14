@@ -1,11 +1,10 @@
 import React, {useContext, Fragment, useState} from 'react'
 import {IPane} from '../@types'
-import {getSetSize, joinClassName} from '../utils/dom'
+import {getSetSize, joinClassName, ResizableModel} from 'resizable-core'
 import {ResizablePaneContext} from '../context/resizable-panes-context'
 import {Resizer} from './resizer'
 import {useHookWithRefCallback} from '../hook/useHookWithRefCallback'
-import {ResizableModel} from '../models'
-
+console.log('Test')
 export const Pane = (props: IPane) => {
   const resizable = useContext<ResizableModel>(ResizablePaneContext)
 
