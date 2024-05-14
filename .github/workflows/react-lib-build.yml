@@ -35,20 +35,23 @@ jobs:
     - name: Lint/EsLint
       run: |
         npm run lint
-      working-directory: ./packages/resizable-panes-react
 
+    - name: Resizable Core Build
+      run: |
+        npm run prod
+      working-directory: ./packages/resizable-core
 
-    - name: Build
+    - name: Resizable React Build
       run: |
         npm run prod
       working-directory: ./packages/resizable-panes-react
 
-    - name: Component Testing
+    - name: Resizable React Testing
       run: |
         npm test
       working-directory: ./packages/resizable-panes-react
         
-    - name: Check Coverage
+    - name: Resizable React Check Coverage
       run: |
         npm run coverage
       working-directory: ./packages/resizable-panes-react
@@ -70,7 +73,7 @@ jobs:
     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
     #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-    - name: NPM Publish
+    - name: Resizable React NPM Publish
       if: ${{ github.ref == 'refs/heads/master' }}
       uses: JS-DevTools/npm-publish@v3
       with:
