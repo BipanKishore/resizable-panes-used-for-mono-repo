@@ -4,7 +4,8 @@ import {
   ResizablePaneContext
 } from '../context/resizable-panes-context'
 
-import {getResizable, 
+import {
+  getResizable,
   deleteUndefined, noop,
   RATIO, RESIZE_HTML_EVENT,
   clearflagsOnNewView, toRatioModeAllPanes,
@@ -15,9 +16,6 @@ import {getResizable,
 import {ResizablePanes} from './resizable-panes'
 
 import {IResizablePaneProviderProps} from '../@types'
-
-
-
 
 const emptyObhect = {}
 

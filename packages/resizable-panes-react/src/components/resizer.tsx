@@ -14,7 +14,6 @@ import {
 import {useHookWithRefCallback} from '../hook/useHookWithRefCallback'
 import {IResizer} from '../@types'
 
-
 export const Resizer = (props: IResizer) => {
   const {children, id} = props
   const resizerId = getResizerId(id)

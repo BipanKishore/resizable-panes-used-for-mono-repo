@@ -3,9 +3,9 @@ name: Build
 on:
   pull_request:
     branches: [ "master" ]
-    paths:
-        - 'packages/resizable-panes-react/**'
-        - 'packages/resizable-core/**'
+  push:
+    branches: [ "master" ]
+
 jobs:
   build:
 
@@ -15,9 +15,10 @@ jobs:
         os: [ubuntu-latest]
         
     runs-on: ${{matrix.os}}
-    defaults:
-        run: 
-          working-directory: ./packages/resizable-panes-react
+
+    # defaults:
+    #     run: 
+    #       working-directory: ./packages/resizable-panes-react
 
     steps:
     - uses: actions/checkout@v3
@@ -34,27 +35,35 @@ jobs:
     - name: Lint/EsLint
       run: |
         npm run lint
+      working-directory: ./packages/resizable-panes-react
+
 
     - name: Build
       run: |
         npm run prod
+      working-directory: ./packages/resizable-panes-react
 
     - name: Component Testing
       run: |
         npm test
+      working-directory: ./packages/resizable-panes-react
         
     - name: Check Coverage
       run: |
         npm run coverage
+      working-directory: ./packages/resizable-panes-react
     
     - name: Upload artifacts
       if: always()
       uses: actions/upload-artifact@v4
       with: 
-        path: cypress/screenshots
+        path: ${{format('{0}/{1}', github.workspace, 'packages/resizable-panes-react/cypress/screenshots')}} 
         retention-days: 30
 
-
+    - name: Echo
+      run: 
+          echo ${{format('{0}/{1}', github.workspace, 'packages/resizable-panes-react')}}
+       
     # - name: SonarCloud Scan
     #   uses: SonarSource/sonarcloud-github-action@master
     #   env:
@@ -66,4 +75,5 @@ jobs:
       uses: JS-DevTools/npm-publish@v3
       with:
         token: ${{ secrets.NPM_TOKEN }}
+        package:  ${{format('{0}/{1}', github.workspace, 'packages/resizable-panes-react')}}
 
