@@ -27,7 +27,7 @@ import {Pane, ResizablePanes} from '../../src'
 import {IGetState, IResizableApi} from '../../src/@types'
 import {
   BUTTOM_FIRST, DEFAULT_MAX_SIZE_KEY, DEFAULT_MIN_SIZE_KEY, TOP_FIRST
-} from  'resizable-core'
+} from '../../../resizable-core'
 import {SinonSpy} from 'cypress/types/sinon'
 
 describe('Storage api', () => {

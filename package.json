@@ -2,7 +2,9 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/demo-app",
+    "packages/resizable-panes-js",
+    "packages/resizable-panes-react"
   ],
   "scripts": {
     "lint": "lerna run lint"
@@ -10,12 +12,12 @@
   "dependencies": {},
   "devDependencies": {
     "lerna": "^8.1.2",
-    "@nx/nx-linux-x64-gnu": "^19.0.3",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.0",
     "@rollup/plugin-typescript": "^11.1.6",
+    "rollup-plugin-typescript2": "^0.36.0",
     "dotenv": "^16.4.5",
     "rollup": "^3.20.2",
     "rollup-plugin-copy": "^3.5.0",
@@ -46,5 +48,8 @@
     "ts-loader": "^9.4.4",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
+  },
+  "optionalDependencies": {
+    "@nx/nx-linux-x64-gnu": "^19.0.3"
   }
 }

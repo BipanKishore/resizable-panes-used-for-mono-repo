@@ -1,5 +1,5 @@
 import React from 'react'
-import {joinClassName} from  'resizable-core'
+import {joinClassName} from '../../../../resizable-core'
 
 export interface ICustomResizerProp {
   horizontal?: boolean,
