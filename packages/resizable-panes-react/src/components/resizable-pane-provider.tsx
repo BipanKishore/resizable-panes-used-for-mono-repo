@@ -11,7 +11,7 @@ import {
   clearflagsOnNewView, toRatioModeAllPanes,
   attachDetectionCoordinate,
   addDOMEvent, removeDOMEvent
-} from 'resizable-core'
+} from '../../../resizable-core'
 
 import {ResizablePanes} from './resizable-panes'
 
@@ -41,9 +41,8 @@ export const attachDefaultPaneProps = (
 }
 
 export const ResizablePaneProvider = (props: IResizablePaneProviderProps) => {
-  const currentProps = attachDefaultPaneProps(
-    props
-  ) as IResizablePaneProviderProps
+  const currentProps = attachDefaultPaneProps(props)
+
   const {visibility, onReady, unit} = currentProps
 
   const resizableRef: any = useRef(getResizable(currentProps))

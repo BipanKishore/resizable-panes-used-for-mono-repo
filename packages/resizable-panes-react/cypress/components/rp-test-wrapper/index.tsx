@@ -7,7 +7,7 @@ import {testResizablePanesId} from './constant'
 import {generatePaneModel} from './util'
 import {MultiStateButtonGroup} from './multi-state-button-group'
 import {addDefaultProps} from '../../utils'
-import {noop} from  'resizable-core'
+import {noop} from '../../../../resizable-core'
 interface IIDMap {
   [id: string]: boolean
 }

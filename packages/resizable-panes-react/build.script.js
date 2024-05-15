@@ -1,7 +1,7 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript'
+import typescript from 'rollup-plugin-typescript2'
 import postcss from 'rollup-plugin-postcss'
 import terser from '@rollup/plugin-terser'
 import {dts} from 'rollup-plugin-dts'
@@ -41,7 +41,11 @@ export const cjsOutOptionsDevelopment = {
 
 export const cjsOutOptionsProduction = {
   file: `${CJS_BUILD_PATH}${'index.cjs.js'}`,
-  format: 'cjs'
+  format: 'cjs',
+  sourcemap: true,
+  sourcemapPathTransform: (sourcePath) => {
+    return sourcePath.substring('../'.length)
+  }
 }
 
 export const esmOutOptionsDevelopment = {
@@ -55,7 +59,11 @@ export const esmOutOptionsDevelopment = {
 
 export const esmOutOptionsProduction = {
   file: `${ESM_BUILD_PATH}${'index.esm.js'}`,
-  format: 'esm'
+  format: 'esm',
+  sourcemap: true,
+  sourcemapPathTransform: (sourcePath) => {
+    return sourcePath.substring('../'.length)
+  }
 }
 
 export const developmentPlugins = [

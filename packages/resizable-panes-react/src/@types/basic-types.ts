@@ -1,4 +1,5 @@
-import {PaneModel} from 'resizable-core'
+import {PaneModel} from '../../../resizable-core/src/models'
+
 export type UnitTypes = 'ratio' | 'pixel' | undefined
 
 export type IPaneModelKey = keyof PaneModel
@@ -7,8 +8,6 @@ export type IPaneNumericKeys = 'size' | 'defaultSize' | 'minSize' | 'maxSize' | 
 
 export type IBooleanOrUndefined = boolean | undefined
 export type IStringOrUndefined = string | undefined
-
-export type IVisibilityState = 'zipped' | 'visible' | 'hidden'
 
 export type IClearFlagsParam = 'setSize' | 'ratio' | 'visibility' | ''
 export type ISetSizeBehaviour = 'ratio' | '1' | '2'

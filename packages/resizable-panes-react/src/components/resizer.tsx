@@ -9,7 +9,7 @@ import {
   ResizableModel,
   getSetResizerSize, joinClassName,
   findIndex, getResizerId
-} from 'resizable-core'
+} from '../../../resizable-core'
 
 import {useHookWithRefCallback} from '../hook/useHookWithRefCallback'
 import {IResizer} from '../@types'

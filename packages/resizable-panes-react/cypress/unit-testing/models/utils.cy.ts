@@ -1,4 +1,4 @@
-import {checkPaneModelErrors} from 'resizable-core'
+import {checkPaneModelErrors} from '../../../../resizable-core'
 import {P0} from '../../component-testing/fix-test-ids'
 
 describe('Dom utils', () => {

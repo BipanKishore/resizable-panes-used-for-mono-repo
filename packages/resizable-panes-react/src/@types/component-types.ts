@@ -1,9 +1,9 @@
 import {MouseEventHandler, ReactElement, ReactNode} from 'react'
 import {IKeyToBoolMap, IMapIdToSize} from './general-type'
-import {PaneModel} from 'resizable-core'
+import {PaneModel} from '../../../resizable-core/src/models'
 import {
   UnitTypes,
-  IVisibilityState,
+
   ISetSizeBehaviour
 } from './basic-types'
 
@@ -24,7 +24,7 @@ export interface IBoolMap {
 }
 
 export interface IVisibilityMap {
-  [key: string]: IVisibilityState;
+  [key: string]: boolean;
 }
 
 export type IGetMaP = INumberMap | IBoolMap;
