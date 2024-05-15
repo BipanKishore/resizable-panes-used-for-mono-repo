@@ -2,8 +2,9 @@
   "name": "resizable-core",
   "version": "6.0.8",
   "description": "A simple library for resizing elements in the browser",
-  "module": "./src/index.ts",
-  "main": "./src/index.ts",
+  "module": "./lib/esm/index.esm.js",
+  "main": "./lib/cjs/index.cjs.js",
+  "types": "./lib/index.d.ts",
   "files": [
     "lib"
   ],
